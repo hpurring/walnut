@@ -21,6 +21,41 @@ const activate = function() {
     // }
 };
 
+
+const adjustGrid = function() {
+    console.log("adjustGrid");
+    var allSquares = document.querySelectorAll(".square");
+    var fivebyfive = document.querySelectorAll("#fivebyfive");
+    var fourbyfour = document.querySelectorAll("#fourbyfour");
+    var threebythree = document.querySelectorAll("#threebythree");
+    var twobytwo = document.querySelectorAll("#twobytwo");
+
+
+    if (document.getElementById("pick-size").selected.value === "5 x 5") {
+        allSquares.forEach(square => {
+            square.display = block;
+        })
+    } else if (document.getElementById("pick-size").selected.value === "4 x 4") {
+        console.log('fourbyfour');
+        fivebyfive.forEach(square => {
+            square.display = none;
+        })
+        fourbyfour.forEach(square => {
+            square.display = block;
+        })
+        threebythree.forEach(square => {
+            square.display = block;
+        })
+        twobytwo.forEach(square => {
+            square.display = block;
+        })
+    }
+}
+
+document.getElementById("pick-size").addEventListener("change", function () {
+    adjustGrid();
+});
+
 document.getElementById("start-btn").addEventListener("click", function() {
     activate();
 });
