@@ -25,29 +25,56 @@ const activate = function() {
 const adjustGrid = function() {
     console.log("adjustGrid");
     var allSquares = document.querySelectorAll(".square");
-    var fivebyfive = document.querySelectorAll("#fivebyfive");
-    var fourbyfour = document.querySelectorAll("#fourbyfour");
-    var threebythree = document.querySelectorAll("#threebythree");
-    var twobytwo = document.querySelectorAll("#twobytwo");
+    var five = document.querySelectorAll("#fivebyfive");
+    var four = document.querySelectorAll("#fourbyfour");
+    var three = document.querySelectorAll("#threebythree");
+    var two = document.querySelectorAll("#twobytwo");
 
+    var option = document.getElementById("pick-size");
+    var value = option.value;
 
-    if (document.getElementById("pick-size").selected.value === "5 x 5") {
+    if (value === "5x5") {
         allSquares.forEach(square => {
-            square.display = block;
+            square.style.visibility = "visible";
         })
-    } else if (document.getElementById("pick-size").selected.value === "4 x 4") {
-        console.log('fourbyfour');
-        fivebyfive.forEach(square => {
-            square.display = none;
+    } else if (value === "4x4") {
+        for (let i = 0; i < five.length; i++) {
+            five[i].style.visibility = "hidden";
+        }
+        four.forEach(square => {
+            square.style.visibility = "visible";
         })
-        fourbyfour.forEach(square => {
-            square.display = block;
+        three.forEach(square => {
+            square.style.visibility = "visible";
         })
-        threebythree.forEach(square => {
-            square.display = block;
+        two.forEach(square => {
+            square.style.visibility = "visible";
         })
-        twobytwo.forEach(square => {
-            square.display = block;
+    } else if (value === "3x3") {
+        for (let i = 0; i < five.length; i++) {
+            five[i].style.visibility = "hidden";
+        }
+        for (let i = 0; i < four.length; i++) {
+            four[i].style.visibility = "hidden";
+        }
+        three.forEach(square => {
+            square.style.visibility = "visible";
+        })
+        two.forEach(square => {
+            square.style.visibility = "visible";
+        })
+    } else if (value === "2x2") {
+        for (let i = 0; i < five.length; i++) {
+            five[i].style.visibility = "hidden";
+        }
+        for (let i = 0; i < four.length; i++) {
+            four[i].style.visibility = "hidden";
+        }
+        for (let i = 0; i < three.length; i++) {
+            three[i].style.visibility = "hidden";
+        }
+        two.forEach(square => {
+            square.style.visibility = "visible";
         })
     }
 }
