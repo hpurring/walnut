@@ -1,29 +1,29 @@
 
 
+// toggle the grid on/off
 const activate = function() {
 
     var allSquares = document.querySelectorAll(".square");
-    if (document.getElementById("threebythree").disabled === true) {
+    if (document.getElementById("twobytwo").disabled !== false) {
         allSquares.forEach(square => {
             square.disabled = false;
+            square.style.cursor = "pointer";
         })
-        document.getElementById("start-btn").innerHTML = "Pause";
+        changeColor();
+        document.getElementById("start-btn").innerHTML = "PAUSE";
     } else {
+        console.log("false");
         allSquares.forEach(square => {
             square.disabled = true;
-            document.getElementById("start-btn").innerHTML = "Start";
+            square.style.cursor = "default";
         })
-
+        document.getElementById("start-btn").innerHTML = "START";
+        freezeColor();
     } 
-
-    // for (var i = 0; i < allSquares.length; i++) {
-    //     square.disabled = false;
-    // }
 };
 
-
+// add and remove squares
 const adjustGrid = function() {
-    console.log("adjustGrid");
     var allSquares = document.querySelectorAll(".square");
     var five = document.querySelectorAll("#fivebyfive");
     var four = document.querySelectorAll("#fourbyfour");
@@ -79,6 +79,38 @@ const adjustGrid = function() {
     }
 }
 
+function changeColor() {
+    let grid = document.querySelectorAll(".square"); 
+    
+    for (let i = 0; i < grid.length; i++) { 
+        grid[i].addEventListener("mouseover", turnBlue);
+        
+        function turnBlue() {
+            if (grid[i].style.backgroundColor === "royalblue") {
+                grid[i].style.backgroundColor = "white";
+            } else {
+                grid[i].style.backgroundColor = "royalblue"
+            }
+        }
+    }
+}
+
+// freeze entire grid
+function freezeColor() {
+    let grid = document.querySelectorAll(".square"); 
+
+    for (let i = 0; i < grid.length; i++) { 
+        
+        grid[i].addEventListener("mouseover", () => {
+            if (grid[i].style.backgroundColor === "royalblue") {
+                grid[i].style.backgroundColor = "white";
+            } else if (grid[i].style.backgroundColor === "white") {
+                grid[i].style.backgroundColor = "royalblue";
+            }
+        })
+    }
+}
+
 document.getElementById("pick-size").addEventListener("change", function () {
     adjustGrid();
 });
@@ -86,3 +118,5 @@ document.getElementById("pick-size").addEventListener("change", function () {
 document.getElementById("start-btn").addEventListener("click", function() {
     activate();
 });
+
+

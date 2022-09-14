@@ -9,168 +9,68 @@
 </head>
 <body>
     <header>
-        <label for="Pick Grid Size">Pick grid size:</label>
+        <label for="Pick Grid Size">Pick mode:</label>
         <select name="Pick Grid Size" id="pick-size">
             <option value="5x5" class="option" >5 x 5</option>
             <option value="4x4" class="option">4 x 4</option>
             <option value="3x3" class="option">3 x 3</option>
             <option value="2x2" class="option">2 x 2</option>
           </select>
-          <button id="start-btn">Start</button>
+          <button id="start-btn">START</button>
     </header>
     <div class="grid-container">
-        <!-- <label class="container" id="">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="two">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="three">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="four">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="five">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="six">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="seven">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="eight">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="nine">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="ten">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="eleven">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="twelve">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="thirteen">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="fourteen">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="fifteen">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="sixteen">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="seventeen">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="eighteen">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="nineteen">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="twenty">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="twenty-">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="twenty-two">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="twenty-three">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="twenty-four">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="container" id="twenty-five">
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label> -->
 
-
-        <input type="checkbox" id="twobytwo" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="twobytwo" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="threebythree" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="fourbyfour" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="fivebyfive" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="twobytwo" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="twobytwo" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="threebythree" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="fourbyfour" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="fivebyfive" class="square" disabled="true">
-        </input>
-        <input type="checkbox"  id="threebythree" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="threebythree" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="threebythree" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fourbyfour" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fivebyfive" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fourbyfour" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fourbyfour" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fourbyfour" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fourbyfour" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fivebyfive" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fivebyfive" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fivebyfive" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fivebyfive" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fivebyfive" class="square" disabled="true">
-        </input>
-        <input type="checkbox" id="fivebyfive" class="square" disabled="true">
-        </input>
+        <div id="twobytwo" class="square" disabled>
+        </div>
+        <div  id="twobytwo" class="square" disabled>
+        </div>
+        <div  id="threebythree" class="square" disabled>
+        </div>
+        <div  id="fourbyfour" class="square" disabled>
+        </div>
+        <div  id="fivebyfive" class="square" disabled>
+        </div>
+        <div  id="twobytwo" class="square" disabled>
+        </div>
+        <div  id="twobytwo" class="square" disabled>
+        </div>
+        <div  id="threebythree" class="square" disabled>
+        </div>
+        <div  id="fourbyfour" class="square" disabled>
+        </div>
+        <div  id="fivebyfive" class="square" disabled>
+        </div>
+        <div  id="threebythree" class="square" disabled>
+        </div>
+        <div id="threebythree" class="square" disabled>
+        </div>
+        <div id="threebythree" class="square" disabled>
+        </div>
+        <div id="fourbyfour" class="square" disabled>
+        </div>
+        <div id="fivebyfive" class="square" disabled>
+        </div>
+        <div id="fourbyfour" class="square" disabled>
+        </div>
+        <div id="fourbyfour" class="square" disabled>
+        </div>
+        <div id="fourbyfour" class="square" disabled>
+        </div>
+        <div id="fourbyfour" class="square" disabled>
+        </div>
+        <div id="fivebyfive" class="square" disabled>
+        </div>
+        <div id="fivebyfive" class="square" disabled>
+        </div>
+        <div id="fivebyfive" class="square" disabled>
+        </div>
+        <div id="fivebyfive" class="square" disabled>
+        </div>
+        <div id="fivebyfive" class="square" disabled>
+        </div>
+        <div id="fivebyfive" class="square" disabled>
+        </div>
+        
     </div>
 
     <script src="script.js"></script>
